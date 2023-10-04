@@ -5,7 +5,9 @@ export const Index = () => {
     return (
         <div>
             <Header />
-            <Main />
+            <Main
+                index={true}
+            />
         </div>
     )
 }
