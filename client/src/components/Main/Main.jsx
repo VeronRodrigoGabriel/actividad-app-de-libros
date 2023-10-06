@@ -1,13 +1,27 @@
+import { FormAddbook} from "./FormAddBook.jsx"
 import { Listbooks } from "./Listbooks.jsx"
 import { Opciones } from "./Opciones.jsx"
-
-export const Main = ({ index }) => {
+import {Link} from 'react-router-dom'
+export const Main = ({ opciones,formAddbook,listbooks }) => {
     return (
         <main>
             {
-                index ? <Opciones /> : null
+                opciones ? <Opciones /> : null
+            }  
+            {
+                formAddbook ? <FormAddbook/> : null
+            } 
+                
+            {
+                listbooks ? <Listbooks /> : null
             }
-            <Listbooks />
+            
+               
+            
+            
+            <div>
+               <Link to='/volver' className='btn btn-outline-danger'>Volver</Link>
+            </div>
         </main>
     )
 }

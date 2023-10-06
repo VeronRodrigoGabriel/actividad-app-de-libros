@@ -1,13 +1,13 @@
 import { Header } from "../components/Header/Header.jsx"
 import { Main } from "../components/Main/Main.jsx"
 
-export const Index = () => {
-    return (
-        <div>
-            <Header />
+export const Addbook = () => {
+    return(
+        <> 
+            <Header/>
             <Main
-                opciones={true}
+            formAddbook={true}
             />
-        </div>
+        </>
     )
 }

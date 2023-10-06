@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Index } from './pages'
 import { Route, Routes } from 'react-router-dom'
 import { Listofbooks } from './pages/listofbooks.jsx'
+import { Addbook } from './pages/Addbook.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
         />
         <Route
           exact path='/add-book'
+          element={<Addbook/>}
         />
         <Route
           exact path='/add-author'
@@ -23,6 +25,10 @@ function App() {
         <Route
           exact path='/list-books'
           element={<Listofbooks />}
+        />
+        <Route
+        axact path='/volver'
+        element={<Index/>}
         />
       </Routes>
     </>
